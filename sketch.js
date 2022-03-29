@@ -1,6 +1,6 @@
 var bow , arrow,  background;
 var bowImage, arrowImage, green_balloonImage, red_balloonImage, pink_balloonImage,blue_, backgroundImage;
-
+var balaov,balaovv,balaop,balaoa,arrowg
 function preload(){
   
   backgroundImage = loadImage("background0.png");
@@ -16,7 +16,10 @@ pink_balloonImage= loadImage("pink_balloon0.png")
 
 function setup() {
   createCanvas(400, 400);
-  
+  balaov=new Group
+  balaovv=new Group
+  balaop=new Group
+  arrowg=new Group
   //criar um plano de fundo
   scene = createSprite(0,0,400,400);
   scene.addImage(backgroundImage);
@@ -73,7 +76,7 @@ function redBalloon() {
   red.velocityX = 3;
   red.lifetime = 150;
   red.scale = 0.1;
-  redB.add(red);
+  balaov.add(red)
 }
 
 function blueBalloon() {
@@ -82,16 +85,16 @@ function blueBalloon() {
   blue.velocityX = 3; 
   blue.lifetime = 150;
   blue.scale = 0.1;
-  //Adicione o grupo
+  balaoa.add(blue)
 }
 
 function greenBalloon() {
-  var pink = createSprite(0,Math.round(random(20, 370)), 10, 10);
+  var greenB = createSprite(0,Math.round(random(20, 370)), 10, 10);
   green_balloonImage.addImage(green_balloonImage);
   greenB.velocityX = 3;
   greenB.lifetime = 150;
   greenB.scale = 0.1;
-  //Adicione o grupo
+  balaovv.add(greenB)
 }
 
 function pinkBalloon() {
@@ -100,7 +103,7 @@ function pinkBalloon() {
   pink.velocityX = 3;
   pink.lifetime = 150;
   pink.scale = 0.1;
-  //Adicione o grupo
+  balaop.add(pink)
 }
 
 
@@ -113,6 +116,6 @@ function pinkBalloon() {
   arrow.velocityX = -4;
   arrow.lifetime = 100;
   arrow.scale = 0.3;
-  arrowGroup.add(arrow);
+  arrowg.add(arrow)
    
 }
